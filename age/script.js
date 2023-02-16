@@ -80,7 +80,7 @@ Promise.all([
   ]).then(startVideo)
 
 async function startVideo(){
-  await navigator.mediaDevices.getUserMedia({video: {}},)   
+  await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })   
     .then(function(stream){
       console.log("setting")
       video1.setAttribute("autoplay", "true");
